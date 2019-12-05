@@ -40,7 +40,7 @@
     &.-blue
     {
         border-color: color(var(--blue));
-        color: color(var(--dark-blue));
+        color: color(var(--blue-dark));
         background: lighten(color(var(--blue)), 50);
 
         .uniform-alert-icon svg
