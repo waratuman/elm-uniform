@@ -1,0 +1,116 @@
+html
+{
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga", "dlig";
+    font-variant-ligatures: normal;
+    font-family: var(--font-family);
+}
+
+body
+{
+    font-size: 1rem;
+    margin: 0;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color: var(--blue);
+
+    &:hover
+    {
+        color: var(--blue-dark);
+    }
+
+    &:visited
+    {
+        color: var(--purple);
+    }
+
+    .-invert &:visited, &:visited -invert
+    {
+        color: var(--gray-dark);
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, pre
+{
+    margin: 0;
+    margin-bottom: 1em;
+
+    &:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+ul, ol, dl
+{
+    ul, ol, dl
+    {
+        margin-bottom: 0;
+    }
+}
+
+dd
+{
+    margin-left: 0;
+    margin-bottom: 0.5em;
+}
+
+dt
+{
+    font-weight: bold;
+}
+
+table
+{
+    background-color: transparent;
+    border-collapse: collapse;
+
+    td, th
+    {
+        display: table-cell;
+        text-align: left;
+    }
+}
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+textarea
+{
+    resize: vertical;
+}
+
+input, select, textarea, button
+{
+    margin: 0;
+    line-height: inherit;
+}
+
+[hidden]
+{
+    display: none !important;
+}
+
+time
+{
+    @extend %text-overflow;
+}
+
+button
+{
+    font-family: var(--font-family);;
+    color: var(--gray-darkest);
+    cursor: pointer;
+}

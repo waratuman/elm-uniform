@@ -1,0 +1,161 @@
+table.uniform-table
+{
+    width:100%;
+
+    tr td, tr th
+    {
+        padding: 1em;
+        /* border-bottom: 1px solid var(--gray-light); */
+    }
+    
+    &.tight
+    {
+        tr td, th
+        {
+            padding: 0.2em 0.5em;
+        }
+    }
+    
+    &.tight-more
+    {
+        tr td, th
+        {
+            padding: 0 0.5em;
+        }
+    }
+    
+    &.no-pad
+    {
+        tr td, th
+        {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+    .head > *, thead > tr > th
+    {
+        color: var(--gray-dark);
+        border-bottom: 1px solid var(--gray) !important;
+    }
+    
+    .head.dark > *, thead.dark > tr > th
+    {
+        background: color(var(--background) lightness(2%));
+    }
+
+    .foot > *, tfoot > tr > td
+    {
+        border-top: 1px solid var(--gray) !important;
+    }
+    
+    tr.middle > td, td.middle, &.middle > *, .middle
+    {
+        vertical-align: middle;
+    }
+
+    tr.top > td, td.top, &.top > *, .top
+    {
+        vertical-align:top;
+    }
+
+    tr.loading td
+    {
+        text-align: center;
+        padding: var(--base);
+    }
+
+    tbody tr.hover, tbody tr:hover
+    {
+        background: var(--background);
+        /* color(var(--background) lightness(90%)); */
+    }
+    
+    
+    .row:last-of-type, tr:last-of-type
+    {
+        td, th
+        {
+            border-bottom: none;
+        }
+    }
+    
+    &.invert{
+        
+        .row > *, td, th
+        {
+            border-bottom-color: var(--gray-dark);
+        }
+    }
+}
+
+.uniform-grid
+{
+    /* border: 1px solid var(--gray); */
+    border-radius: 0.2em;
+
+    > *
+    {
+        padding: 1em;
+    }
+
+    .header
+    {
+        color: var(--gray-dark);
+        border-bottom: 1px solid var(--gray);
+        background: color(var(--background) tint(50%));
+    }
+}
+
+.uniform-table-dot-leaders
+{
+    line-height: 1;
+    table-layout: fixed;
+    
+    td, th
+    {
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        vertical-align: bottom;
+    }
+
+    td
+    {
+        padding-left: 0.5em;
+    }
+    
+    th
+    {
+        background: url("data:image/svg+xml; utf8,#{icon-circle(6, 8, 1, var(--gray))}");
+        background-repeat: repeat-x;
+        background-position: left bottom;
+        
+        span
+        {
+            background-color: white;
+            padding-right: 0.5em;
+            position: relative;
+        }
+    }
+    
+    thead
+    {
+        th
+        {
+            background:none;
+        }
+    }
+    
+    &.bg-background
+    {
+        th
+        {
+            background-image:radial-gradient(black 1px, var(--background) 0px);
+            
+            span
+            {
+                background-color: var(--background);
+            }
+        }
+    }
+}

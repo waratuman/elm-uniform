@@ -1,0 +1,93 @@
+.uniform-alert
+{
+    border-radius: 0.2em;
+    border: 1px solid color(var(--gray-darker));
+    background: white;
+    position:relative;
+    color: color(var(--gray-darker));
+
+    p:last-of-type
+    {
+        margin-bottom: 0 !important;
+    }
+
+    &.-green
+    {
+        border-color: color(var(--green));
+        color: color(var(--green-dark));
+        background: lighten(color(var(--green)), 40);
+
+        .uniform-alert-icon svg
+        {
+            fill: color(var(--green));
+            color: color(var(--green));
+        }
+    }
+
+    &.-red
+    {
+        border-color: color(var(--red));
+        color: color(var(--red));
+        background: lighten(color(var(--red)), 40);
+
+        .uniform-alert-icon svg
+        {
+            fill: color(var(--red));
+            color: color(var(--red));
+        }
+    }
+
+    &.-blue
+    {
+        border-color: color(var(--blue));
+        color: color(var(--dark-blue));
+        background: lighten(color(var(--blue)), 50);
+
+        .uniform-alert-icon svg
+        {
+            fill: color(var(--blue));
+            color: color(var(--blue));
+        }
+    }
+
+    .uniform-alert-body
+    {
+        overflow:hidden;
+        padding: 1em;
+    }
+
+    .uniform-alert-icon
+    {
+        padding: 1em;
+        padding-right: 0;
+        float: left;
+        min-height: 1px;
+    }
+
+    .uniform-alert-close
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+
+        &::before
+        {
+            position:absolute;
+            left: 5px;
+            top: 0;
+            content: icon-x(10, "#000000");
+            opacity: 0.3;
+        }
+
+        &:hover
+        {
+            &::before
+            {
+                opacity: 1;
+            }
+        }
+    }
+}

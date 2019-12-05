@@ -1,0 +1,25 @@
+@import './variables.css';
+@import './uniform/normalize.css';
+
+@import './uniform/alert.css';
+@import './uniform/autocomplete.css';
+@import './uniform/button.css';
+@import './uniform/card.css';
+@import './uniform/dropdown.css';
+@import './uniform/extensions.css';
+@import './uniform/form.css';
+@import './uniform/icons.css';
+@import './uniform/label.css';
+@import './uniform/loader.css';
+@import './uniform/modal.css';
+@import './uniform/nav.css';
+@import './uniform/pill.css';
+@import './uniform/table.css';
+@import './uniform/thumb.css';
+
+html, body
+{
+    background: #F6F6F6;
+    min-width: 100%;
+    height: 100%;
+}

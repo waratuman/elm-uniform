@@ -1,0 +1,124 @@
+.uniform-loader
+{
+    line-height: 1em;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: -.05em;
+
+    &.-inline
+    {
+        padding: 0;
+        line-height: inherit;
+    }
+    
+    span
+    {
+        color: color-mod(var(--black) alpha(1));
+        text-shadow: -1px -1px 0 color-mod(var(--white) alpha(.2));
+        animation: uniformLoader-light 1s infinite linear;
+        animation-delay: 0.2s;
+    }
+
+    span:first-of-type
+    {
+        animation-delay: 0s;
+    }
+
+    span:last-of-type
+    {
+        animation-delay: 0.4s;
+    }
+
+    .uniform-loader-container
+    {
+        white-space: nowrap;
+    }
+
+    &.-light
+    {
+        span
+        {
+            color: color-mod(var(--white) alpha(1));
+            text-shadow: -1px -1px 0 color-mod(var(--black) alpha(.2));
+            animation: uniformLoader 1s infinite linear;
+            animation-delay: 0.2s;
+        }
+
+        span:first-of-type
+        {
+            animation-delay: 0s;
+        }
+
+        span:last-of-type
+        {
+            animation-delay: 0.4s;
+        }
+    }
+
+    &.-cover
+    {
+        display: block;
+        background: color-mod(var(--white) alpha(0.5));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999999;
+
+        .uniform-loader-container
+        {
+            position: absolute;
+            @extend %position-center;
+        }
+
+        &.-light
+        {
+            background:color-mod(var(--black) alpha(.5));
+        }
+    }
+
+    &.-top
+    {
+        .uniform-loader-container
+        {
+            top: 20px;
+        }
+    }
+
+}
+
+@keyframes uniformLoader
+{
+  0%
+  {
+    color: rgba(255, 255, 255, 0);
+  }
+  
+  25%
+  {
+    color: white;
+  }
+  
+  100%
+  {
+    color: white;
+  }
+}
+
+@keyframes uniformLoader-light {
+  0%
+  {
+    color: black;
+  }
+  
+  25%
+  {
+    color: rgba(0, 0, 0, 0.2);
+  }
+  
+  100%
+  {
+    color: rgba(0, 0, 0, 0.2);
+  }
+}

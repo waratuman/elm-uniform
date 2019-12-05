@@ -1,0 +1,321 @@
+.uniform-pill-label
+{
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0.0714em 0.357em 0.0714em;
+    border: 0.1em solid var(--gray-darker);
+    color: var(--gray-darker);
+    border-radius: 0.3em;
+    line-height: 1.2;
+    
+    &.-fill
+    {
+        border: none;
+        background: color-mod(var(--gray-darker) alpha(0.15));
+        color: var(--gray-darker);
+        padding: 0.1714em 0.457em 0.1714em;
+    }
+
+    &.-round
+    {
+        border-radius: 1em;
+    }
+    
+    &.pad-more
+    {
+        padding: 0.0714em 0.5em;
+    }
+
+    &.-background
+    {
+        color: var(--background);
+        border-color: var(--background);
+        &.-fill
+        {
+            background-color: color-mod(var(--background) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-lightest
+    {
+        color: var(--gray-lightest);
+        border-color: var(--gray-lightest);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-lightest) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-lighter
+    {
+        color: var(--gray-lighter);
+        border-color: var(--gray-lighter);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-lighter) alpha(0.15));
+        }
+        
+    }
+    
+    &.-gray-light
+    {
+        color: var(--gray-light);
+        border-color: var(--gray-light);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-light) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray
+    {
+        color: var(--gray);
+        border-color: var(--gray);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-dark
+    {
+        color: var(--gray-dark);
+        border-color: var(--gray-dark);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-dark) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-darker
+    {
+        color: var(--gray-darker);
+        border-color: var(--gray-darker);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-darker) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-darkest
+    {
+        color: var(--gray-darkest);
+        border-color: var(--gray-darkest);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-darkest) alpha(0.15));
+        }
+        
+    }
+
+    &.-gray-background
+    {
+        color: var(--gray-background);
+        border-color: var(--gray-background);
+        &.-fill
+        {
+            background-color: color-mod(var(--gray-background) alpha(0.15));
+        }
+        
+    }
+
+    &.-green
+    {
+        color: var(--green);
+        border-color: var(--green);
+        &.-fill
+        {
+            background-color: color-mod(var(--green) alpha(0.15));
+        }
+        
+    }
+    
+    &.-green-light
+    {
+        color: var(--green-light);
+        border-color: var(--green-light);
+        &.-fill
+        {
+            background-color: color-mod(var(--green-light) alpha(0.15));
+        }
+        
+    }
+    
+    &.-green-dark
+    {
+        color: var(--green-dark);
+        border-color: var(--green-dark);
+        &.-fill
+        {
+            background-color: color-mod(var(--green-dark) alpha(0.15));
+        }
+        
+    }
+    
+    &.-blue
+    {
+        color: var(--blue);
+        border-color: var(--blue);
+        &.-fill
+        {
+            background-color: color-mod(var(--blue) alpha(0.15));
+        }
+        
+    }
+    
+    &.-blue-bright
+    {
+        color: var(--blue-bright);
+        border-color: var(--blue-bright);
+        &.-fill
+        {
+            background-color: color-mod(var(--blue-bright) alpha(0.15));
+        }
+        
+    }
+    
+    &.-blue-light
+    {
+        color: var(--blue-light);
+        border-color: var(--blue-light);
+        &.-fill
+        {
+            background-color: color-mod(var(--blue-light) alpha(0.15));
+        }
+        
+    }
+    
+    &.-blue-dark
+    {
+        color: var(--blue-dark);
+        border-color: var(--blue-dark);
+        &.-fill
+        {
+            background-color: color-mod(var(--blue-dark) alpha(0.15));
+        }
+        
+    }
+    
+    &.-purple
+    {
+        color: var(--purple);
+        border-color: var(--purple);
+        &.-fill
+        {
+            background-color: color-mod(var(--purple) alpha(0.15));
+        }
+        
+    }
+    
+    &.-red
+    {
+        color: var(--red);
+        border-color: var(--red);
+        &.-fill
+        {
+            background-color: color-mod(var(--red) alpha(0.15));
+        }
+        
+    }
+    
+    &.-red-light
+    {
+        color: var(--red-light);
+        border-color: var(--red-light);
+        &.-fill
+        {
+            background-color: color-mod(var(--red-light) alpha(0.15));
+        }
+        
+    }
+    
+    &.-red-dark
+    {
+        color: var(--red-dark);
+        border-color: var(--red-dark);
+        &.-fill
+        {
+            background-color: color-mod(var(--red-dark) alpha(0.15));
+        }
+        
+    }
+    
+    &.-red-bright
+    {
+        color: var(--red-bright);
+        border-color: var(--red-bright);
+        &.-fill
+        {
+            background-color: color-mod(var(--red-bright) alpha(0.15));
+        }
+        
+    }
+
+    &.-yellow
+    {
+        color: var(--yellow);
+        border-color: var(--yellow);
+        &.-fill
+        {
+            background-color: color-mod(var(--yellow) alpha(0.15));
+        }
+        
+    }
+    
+    &.-yellow-dark
+    {
+        color: var(--yellow-dark);
+        border-color: var(--yellow-dark);
+        &.-fill
+        {
+            background-color: color-mod(var(--yellow-dark) alpha(0.15));
+        }
+        
+    }
+    
+    &.-yellow-light
+    {
+        color: var(--yellow-light);
+        border-color: var(--yellow-light);
+        &.-fill
+        {
+            background-color: color-mod(var(--yellow-light) alpha(0.15));
+        }
+        
+    }
+    
+    &.-black
+    {
+        color: var(--black);
+        border-color: var(--black);
+        &.-fill
+        {
+            background-color: color-mod(var(--black) alpha(0.15));
+        }
+        
+    }
+    
+    &.-white
+    {
+        color: var(--white);
+        border-color: var(--white);
+        &.-fill
+        {
+            background-color: color-mod(var(--white) alpha(0.15));
+        }
+        
+    }
+}
+/* 
+@include colors('.uniformLabel.', ('border-color' 'color'));
+@each $key, $value in $colors {
+    @include size-rules(".uniformLabel.-fill.-#{$key}"){
+        background-color: rgba($value, 0.15);
+    }
+} */

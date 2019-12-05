@@ -1,0 +1,72 @@
+.uniform-dropdown
+{
+    display: flex;
+    position: relative;
+
+    > :last-child
+    {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 2px);/* + 0.5em + 2px);*/
+        display: none;
+    }
+
+    &.hover, &:hover
+    {
+        color: var(--blue);
+        border-bottom-color: var(--blue);
+    }
+
+    &.active
+    {
+        color: var(--green-dark);
+        border-bottom-color: var(--green-dark);
+    }
+
+    &:hover > :last-child,
+    &:focus-within > :last-child,
+    & > :last-child:hover,
+    & > :last-child:focus
+    {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+
+    > :last-child > * {
+        clear: both;
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    &.-invert, &.-invert > :last-child
+    {
+        box-shadow: inset 0 -1px 0 0 color-mod(var(--white) alpha(0.10));
+        background: var(--gray-darkest);
+        color: color-mod(var(--white) alpha(0.6));
+
+        & > a
+        {
+            color: color-mod(var(--white) alpha(0.6));
+
+            &:hover
+            {
+                color: var(--white);
+                border-bottom-color: var(--blue-bright);
+            }
+
+            &.active
+            {
+                color: var(--white);
+                background: color-mod(var(--black) alpha(0.15));
+                border-bottom-color: var(--green-light);
+            }
+        }
+    }
+
+}

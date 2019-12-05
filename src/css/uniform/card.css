@@ -1,0 +1,131 @@
+.uniform-card
+{
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 0.2em;
+    margin-bottom: 1em;
+    
+    &.-nest
+    {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+
+    &.-clip
+    {
+        overflow:hidden;
+    }
+    
+    &.-tile
+    {
+        border-radius: 0;
+        margin: 0;
+        margin-bottom: -1px;
+        margin-right: -1px;
+    }
+    
+    .uniform-card-header, .uniform-card-footer, .uniform-card-body
+    {
+        padding: 1em;
+        clear: both;
+    }
+
+    .uniform-card-header
+    {
+        font-size: var(--large);
+        border-bottom: 1px solid var(--gray);
+
+        > *
+        {
+            margin: 0;
+        }
+    }
+
+    .uniform-card-footer
+    {
+        border-top: 1px solid var(--gray);
+    }
+    
+    .uniform-card-collapse
+    {
+        display:none;
+    }
+    
+    .uniform-card-icon
+    {
+        transition: transform 0.2s;
+    }
+    
+    &.expanded
+    {
+        .uniform-card-header
+        {
+            .uniform-card-icon
+            {
+                transform: rotate(180deg);
+            }
+        }
+
+        .uniform-card-collapse
+        {
+            display:block;
+        }
+    }
+    
+    &.uniform-card-accordion
+    {
+        margin: 0;
+        margin-bottom:-1px;
+        border-radius: 0;
+        transition: margin 0.5s;
+    
+        &:first-of-type
+        {
+            border-top-left-radius: 0.2em;
+            border-top-right-radius: 0.2em;
+        }
+
+        &:last-of-type
+        {
+            border-bottom-left-radius: 0.2em;
+            border-bottom-right-radius: 0.2em;
+        }
+
+        .uniform-card-header
+        {
+            cursor: pointer;
+            border-bottom-style: none;
+
+            &:hover
+            {
+                background: color(var(--blue) tint(50%));
+            }
+        }
+
+        &.expanded
+        {
+            margin: 1em 0;
+            border-radius: 0.2em;
+            
+            &:first-of-type
+            {
+                margin-top:0;
+            }
+            
+            &:last-of-type
+            {
+                margin-bottom:0;
+            }
+            
+            .uniform-card-header
+            {
+                border-bottom-style: solid;
+
+                &:hover
+                {
+                    background: none;
+                }
+            }
+        }
+    }
+}

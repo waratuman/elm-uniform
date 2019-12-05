@@ -1,0 +1,13 @@
+%text-overflow
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+%text-overflow-inherit
+{
+    text-overflow: inherit;
+    white-space: inherit;
+    overflow: inherit;
+}
