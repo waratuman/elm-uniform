@@ -1,5 +1,6 @@
 %text-input
 {
+    font-size: 1em;
     font-family: var(--font-family);
     border: 1px solid var(--gray);
     padding: 0.5em;
@@ -72,7 +73,7 @@ select.uniform-input
     background-position: center right;
     background-repeat: no-repeat;
     background-size: auto 40%;
-    padding-right: 1.5em !important;    
+    padding-right: 1.5em !important;
 }
 
 .-invert select.uniform-input
@@ -109,7 +110,7 @@ button.uniform-input
         {
             margin-bottom: 0;
         }
-        
+
         &:last-of-type
         {
             margin-bottom: 0;
@@ -163,7 +164,7 @@ button.uniform-input
 [data-uniform-error]
 {
     position: relative;
-    
+
     &::after
     {
         content: attr(data-uniform-error);

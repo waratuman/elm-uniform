@@ -3,6 +3,7 @@ module Uniform.Autocomplete exposing
     , Msg(..)
     , State
     , Translator
+    , clear
     , init
     , onKeyDown
     , setOptions
@@ -137,6 +138,11 @@ view s =
                     )
                ]
         )
+
+
+clear : State a -> State a
+clear state =
+    { state | value = Just "" }
 
 
 update : InternalMsg a -> State a -> ( State a, Cmd (Msg a) )

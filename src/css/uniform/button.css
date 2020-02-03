@@ -19,10 +19,10 @@
 
     color: var(--gray-darkest);
     background-color: white;
-    background-image: linear-gradient(var(--white) 33%, color(var(--white) shade(7%)));
+    background-image: linear-gradient(var(--white) 33%, color-mod(var(--white) shade(7%)));
     border-radius: 0.2em;
-    border: 1px solid color(var(--gray-darkest) tint(40%));
-    
+    border: 1px solid color-mod(var(--gray-darkest) tint(40%));
+
     &.input-height
     {
         line-height: 1.4;
@@ -48,17 +48,17 @@
 
     &:hover, &.hover, &:focus
     {
-        background-image: linear-gradient(var(--white) 33%, color(var(--white) shade(9%)));
+        background-image: linear-gradient(var(--white) 33%, color-mod(var(--white) shade(9%)));
     }
 
     &:active, &.active
     {
-        box-shadow: inset 0 0 10px color(var(--black) a(0.1));
+        box-shadow: inset 0 0 10px color-mod(var(--black) a(0.1));
     }
-    
+
     &.-outline
     {
-        border-color: var(--gray-darkest);
+        border: 1px solid var(--gray-darkest);
         color: var(--gray-darkest);
     }
 
@@ -71,10 +71,10 @@
     &.-green
     {
         background: var(--green);
-        background-color: color(var(--green) shade(3%));
-        background-image: linear-gradient(color(var(--green) tint(5%)), color(var(--green) shade(3%)));
-        border-color: color(var(--green) shade(3%));
-        
+        background-color: color-mod(var(--green) shade(3%));
+        background-image: linear-gradient(color-mod(var(--green) tint(5%)), color-mod(var(--green) shade(3%)));
+        border-color: color-mod(var(--green) shade(3%));
+
         &.-outline
         {
             border-color: var(--green-dark);
@@ -83,17 +83,17 @@
 
         &:hover, &.hover, &:focus
         {
-            background-image: linear-gradient(var(--green) 33%, color(var(--green) shade(9%)));
+            background-image: linear-gradient(var(--green) 33%, color-mod(var(--green) shade(9%)));
         }
     }
-    
+
     &.-blue
     {
         background: var(--blue);
-        background-color: color(var(--blue) shade(3%));
-        background-image: linear-gradient(var(--blue), color(var(--blue) shade(3%)));
-        border-color: color(var(--blue) shade(3%));
-        
+        background-color: color-mod(var(--blue) shade(3%));
+        background-image: linear-gradient(var(--blue), color-mod(var(--blue) shade(3%)));
+        border-color: color-mod(var(--blue) shade(3%));
+
         &.-outline
         {
             color: var(--blue);
@@ -102,16 +102,16 @@
 
         &:hover, &.hover, &:focus
         {
-            background-image: linear-gradient(var(--blue) 33%, color(var(--blue) shade(9%)));
+            background-image: linear-gradient(var(--blue) 33%, color-mod(var(--blue) shade(9%)));
         }
     }
 
     &.-red
     {
         background: var(--red);
-        background-color: color(var(--red) shade(3%));
-        background-image: linear-gradient(var(--red), color(var(--red) shade(3%)));
-        border-color: color(var(--red) shade(3%));
+        background-color: color-mod(var(--red) shade(3%));
+        background-image: linear-gradient(var(--red), color-mod(var(--red) shade(3%)));
+        border-color: color-mod(var(--red) shade(3%));
 
         &.-outline
         {
@@ -121,17 +121,17 @@
 
         &:hover, &.hover, &:focus
         {
-            background-image: linear-gradient(var(--red) 33%, color(var(--red) shade(9%)));
+            background-image: linear-gradient(var(--red) 33%, color-mod(var(--red) shade(9%)));
         }
     }
 
     &.-yellow
     {
         background: var(--yellow);
-        background-color: color(var(--yellow) shade(3%));
-        background-image: linear-gradient(color(var(--yellow) tint(5%)), color(var(--yellow) shade(3%)));
-        border-color: color(var(--yellow) shade(3%));
-        
+        background-color: color-mod(var(--yellow) shade(3%));
+        background-image: linear-gradient(color-mod(var(--yellow) tint(5%)), color-mod(var(--yellow) shade(3%)));
+        border-color: color-mod(var(--yellow) shade(3%));
+
         &.-outline
         {
             border-color: var(--yellow-dark);
@@ -140,7 +140,7 @@
 
         &:hover, &.hover, &:focus
         {
-            background-image: linear-gradient(var(--yellow) 33%, color(var(--yellow) shade(9%)));
+            background-image: linear-gradient(var(--yellow) 33%, color-mod(var(--yellow) shade(9%)));
         }
     }
 
@@ -171,34 +171,35 @@
     &.-large
     {
         padding: 1em 2em;
-        font-weight:bold;
+        font-weight: bold;
+        height: 3.25em;
     }
-    
+
     &.-input
     {
         padding-top: 0.65em;
         padding-bottom: 0.65em;
     }
-    
+
     &.-warn:hover
     {
         border-color: var(--red);
         background: var(--red);
         color: var(--white);
-    
+
         &.clear
         {
             color: var(--red);
             background: none;
         }
-        
+
         &.-outline
         {
             color: var(--red);
-            border-color: color(var(--gray-darkest) tint(30%));
+            border-color: color-mod(var(--gray-darkest) tint(30%));
         }
     }
-    
+
     &.-block
     {
         padding-left: 0.5em !important;
@@ -224,7 +225,7 @@
             border-color: var(--white);
         }
     }
-    
+
     &.-gray
     {
         color: var(--gray-darker);
@@ -235,21 +236,21 @@
             border-color: var(--gray-dark);
         }
     }
-    
+
     &.-gray-dark
     {
         color: var(--white);
-        background-color: color(var(--gray-dark) shade(3%));
-        background-image: linear-gradient(var(--gray-dark), color(var(--gray-dark) shade(3%)));
-        border-color: color(var(--gray-dark) shade(3%));
+        background-color: color-mod(var(--gray-dark) shade(3%));
+        background-image: linear-gradient(var(--gray-dark), color-mod(var(--gray-dark) shade(3%)));
+        border-color: color-mod(var(--gray-dark) shade(3%));
 
         &.-outline
         {
-            color: color(var(--gray) tint(20%));
-            border-color: color(var(--gray) tint(30%));
+            color: color-mod(var(--gray) tint(20%));
+            border-color: color-mod(var(--gray) tint(30%));
         }
     }
-    
+
     &:disabled, &.disabled, &:disabled:hover, &.disabled:hover
     {
         cursor: not-allowed;
@@ -277,11 +278,11 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNy4xNjdweCIgaGVpZ2h0PSIyOHB4IiB2aWV3Qm94PSIwIDAgMjcuMTY3IDI4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNy4xNjcgMjgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJpY29tb29uLWlnbm9yZSI+PC9nPjxwYXRoIGZpbGw9IiM1MDUxNTMiIGQ9Ik0xNiwxMWMwLDAuMjcxLTAuMSwwLjUwNS0wLjI5NywwLjcwM2wtNyw3QzguNTA1LDE4LjksOC4yNzEsMTksOCwxOXMtMC41MDUtMC4xLTAuNzAzLTAuMjk3bC03LTdDMC4wOTksMTEuNTA1LDAsMTEuMjcxLDAsMTFzMC4wOTktMC41MDUsMC4yOTctMC43MDNDMC40OTUsMTAuMDk5LDAuNzI5LDEwLDEsMTBoMTRjMC4yNzEsMCwwLjUwNSwwLjA5OSwwLjcwMywwLjI5N0MxNS45LDEwLjQ5NSwxNiwxMC43MjksMTYsMTF6Ii8+PC9zdmc+),
-        linear-gradient(var(--white) 33%, color(var(--white) shade(7%)));
+        linear-gradient(var(--white) 33%, color-mod(var(--white) shade(7%)));
     background-position: center right, center;
     background-repeat: no-repeat, repeat;
     background-size: auto 40%, auto;
-    padding-right: 1.5em !important;    
+    padding-right: 1.5em !important;
 }
 
 
@@ -292,7 +293,7 @@ span.uniform-button
 
 a.uniform-button
 {
-    user-select: none; 
+    user-select: none;
 }
 
 .uniform-button-group
@@ -307,7 +308,7 @@ a.uniform-button
         z-index: 1;
         margin-right: -1px;
         border-radius: 0;
-        
+
         &:last-child
         {
             border-radius: 0 0.2em 0.2em 0;
@@ -317,12 +318,12 @@ a.uniform-button
         {
             border-radius: 0.2em 0 0 0.2em;
         }
-        
+
         &.active, &:active
         {
-            background-color: color(var(--green) shade(3%));
-            background-image: linear-gradient(color(var(--green) tint(5%)), color(var(--green) shade(3%)));
-            border-color: color(var(--green) shade(3%));
+            background-color: color-mod(var(--green) shade(3%));
+            background-image: linear-gradient(color-mod(var(--green) tint(5%)), color-mod(var(--green) shade(3%)));
+            border-color: color-mod(var(--green) shade(3%));
             color: var(--white);
         }
 
