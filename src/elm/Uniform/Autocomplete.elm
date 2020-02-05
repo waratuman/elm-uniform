@@ -12,7 +12,6 @@ module Uniform.Autocomplete exposing
     , view
     )
 
-import Char
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -29,6 +28,7 @@ type alias State a =
     , options : Maybe (List a)
     , identifier : a -> String
     , stringifier : a -> String
+    , displayer : a -> List (Html (Msg a))
     , ulDisplay : String
     , mouseIn : Bool
     }
@@ -72,24 +72,24 @@ translator { internal, select, setValue } msg =
             setValue value
 
 
-init : Maybe a -> (a -> String) -> (a -> String) -> State a
-init value stringifier identifier =
+init : Maybe a -> (a -> String) -> (a -> String) -> Maybe (a -> List (Html (Msg a))) -> State a
+init value identifier stringifier displayer =
     { value = Maybe.map stringifier value
     , focus = Nothing
     , placeholder = ""
     , stringifier = stringifier
     , identifier = identifier
+    , displayer = Maybe.withDefault (\x -> [ text (stringifier x) ]) displayer
     , options = Nothing
     , ulDisplay = "none"
     , mouseIn = False
     }
 
 
-view : State a -> Html (Msg a)
-view s =
+view : State a -> List (Html.Attribute (Msg a)) -> Html (Msg a)
+view s attrs =
     div
-        [ class "uniform-autocomplete"
-        ]
+        (class "uniform-autocomplete" :: attrs)
         (input
             ((case s.value of
                 Just v ->
@@ -115,10 +115,10 @@ view s =
                     ]
                     (case s.options of
                         Nothing ->
-                            [ li [] [ text "Loading…" ] ]
+                            [ li [ class "loading" ] [ text "Loading…" ] ]
 
                         Just [] ->
-                            [ li [] [ text "No results" ] ]
+                            [ li [ class "no-results" ] [ text "No results" ] ]
 
                         Just options ->
                             List.map
@@ -132,7 +132,7 @@ view s =
                                               )
                                             ]
                                         ]
-                                        [ text (s.stringifier o) ]
+                                        (s.displayer o)
                                 )
                                 options
                     )
